@@ -22,4 +22,17 @@ rate: 5%
 final balance: 1320.68
 
 """
+ai = int(input("enter the annual investment:  "))
+air = int(input("enter the annual Interest rate:  "))
+air =  air / 100
+print(air)
+years = int(input("enter the amount of years:  "))
 
+total = ai + (ai * air)
+
+for i in range(years-1):
+    total += ai
+    total = total + (total * air)
+
+total = round(total,2)
+print(f"The final balance is: ${total}")
