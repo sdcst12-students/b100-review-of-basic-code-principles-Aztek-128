@@ -23,7 +23,7 @@ final balance: 1320.68
 
 """
 ai = int(input("enter the annual investment:  "))
-air = int(input("enter the annual Interest rate:  "))
+air = int(input("enter the annual Interest rate as a percentage:  "))
 air =  air / 100
 print(air)
 years = int(input("enter the amount of years:  "))
