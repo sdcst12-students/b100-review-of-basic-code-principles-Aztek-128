@@ -13,3 +13,26 @@ Your program should ask the user for
 * The program will calculate the amount of interest earned and display it.
 * Appropriate formatting of the output is a requirement for this assignment
 """
+
+initial = int(input("enter initial investment:  "))
+annual = int(input("enter annual interest rate:  "))
+time = int(input("enter time limit:   "))
+
+a = annual / 100
+print(a)
+while True:
+  timevalue = input("enter length of time  1 for year, 2 for month, 3 for day:  ")
+
+  if timevalue == "1":
+    break
+  elif timevalue == "2":
+    time /= 12
+    break
+  elif timevalue == "3":
+    time/365
+    break
+  else:
+    print("re-enter the length of time")
+
+I = initial * a * time
+print(f"the amount of money you have earned is  ${I}")

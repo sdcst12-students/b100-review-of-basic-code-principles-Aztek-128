@@ -22,3 +22,19 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
+debt = float(input("enter in the initial debt:  "))
+annualinterest = float(input("enter in the annual interest rate:  "))
+annualinterest = annualinterest / 100
+annualpayment = int(input("enter the annual payment:  "))
+totalinterest = 0
+years = 0
+while debt > 0:
+
+    interest = debt * annualinterest
+    debt = debt + interest
+    totalinterest = totalinterest + interest
+    debt -= annualpayment
+    years +=1
+
+
+print(f"it will take {years} months and he will have paid {round(totalinterest,2)}")
